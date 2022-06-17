@@ -1,18 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {ToolbarModule} from "primeng/toolbar";
 import {ButtonModule} from "primeng/button";
 import {SplitButtonModule} from "primeng/splitbutton";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {StepsModule} from "primeng/steps";
 import {ToastModule} from "primeng/toast";
-import { AboutComponent } from './about/about.component';
-import { UploadComponent } from './upload/upload.component';
-import { FormComponent } from './form/form.component';
-import { TableComponent } from './table/table.component';
-import { SummaryComponent } from './summary/summary.component';
+import {AboutComponent} from './about/about.component';
+import {UploadComponent} from './upload/upload.component';
+import {FormComponent} from './form/form.component';
+import {TableComponent} from './table/table.component';
+import {SummaryComponent} from './summary/summary.component';
+import {FileUploadModule} from "primeng/fileupload";
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -24,6 +28,8 @@ import { SummaryComponent } from './summary/summary.component';
     SummaryComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
@@ -31,9 +37,12 @@ import { SummaryComponent } from './summary/summary.component';
     ButtonModule,
     SplitButtonModule,
     StepsModule,
-    ToastModule
+    ToastModule,
+    FileUploadModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
