@@ -17,6 +17,7 @@ import {FileUploadModule} from "primeng/fileupload";
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {TableModule} from "primeng/table";
+import {StoreModule} from "@ngrx/store";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {TableModule} from "primeng/table";
     StepsModule,
     ToastModule,
     FileUploadModule,
-    TableModule
+    TableModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
