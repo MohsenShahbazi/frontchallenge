@@ -42,20 +42,20 @@ export class AppComponent implements OnInit {
 
     this.stepItems = [
       {
-        label: 'about',
-        routerLink: 'about'
+        label: 'upload image',
+        routerLink: 'upload'
       },
       {
-        label: 'Seat',
-        routerLink: 'seat'
+        label: 'form',
+        routerLink: 'form'
       },
       {
-        label: 'Payment',
-        routerLink: 'payment'
+        label: 'table',
+        routerLink: 'table'
       },
       {
-        label: 'Confirmation',
-        routerLink: 'confirmation'
+        label: 'summary',
+        routerLink: 'summary'
       }
     ];
   }
