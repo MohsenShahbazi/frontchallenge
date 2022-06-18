@@ -18,6 +18,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {TableModule} from "primeng/table";
 import {StoreModule} from "@ngrx/store";
+import {CalendarModule} from "primeng/calendar";
+import {InputNumberModule} from "primeng/inputnumber";
+import {DropdownModule} from "primeng/dropdown";
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import {StoreModule} from "@ngrx/store";
     ToastModule,
     FileUploadModule,
     TableModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    CalendarModule,
+    InputNumberModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

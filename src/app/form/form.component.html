@@ -1,11 +1,16 @@
-<form [formGroup]="myForm"  (ngSubmit)="onFormSubmit()">
+<form [formGroup]="myForm" (ngSubmit)="onFormSubmit()">
 
-  Amount: <input formControlName="amount"  placeholder="Enter Name">
-  Date: <input formControlName="date"  placeholder="Enter Age">
-  Status: <input formControlName="status"  placeholder="Enter Age">
-  Source: <input formControlName="source"  placeholder="Enter Age">
+  Amount:
+  <p-inputNumber formControlName="amount" placeholder="Enter Amount"></p-inputNumber>
+  Date:
+  <p-calendar formControlName="date" placeholder="Select Date"></p-calendar>
+  Status:
+  <p-dropdown formControlName="status" [options]="statusList" optionLabel="name"></p-dropdown>
+  Source:
+  <textarea pInputTextarea formControlName="source" placeholder="Enter Source of fund"></textarea>
+
   <button type="submit">Submit</button>
 
-  <button pButton type="button" label="Goto Table"  [disabled]="myForm.invalid" ></button>
+  <button pButton type="button" label="Goto Table" [disabled]="myForm.invalid"></button>
 </form>
 

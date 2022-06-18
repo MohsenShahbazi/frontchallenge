@@ -2,6 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
+interface Status {
+  name: string,
+  code: number
+}
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -14,11 +19,18 @@ export class FormComponent implements OnInit {
     status: new FormControl(),
     source: new FormControl()
   });
+  statusList: Status[]=[];
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
+    this.statusList = [
+      {name: 'Active', code: 0},
+      {name: 'InActive', code: 1},
+      {name: 'Enable', code: 2},
+      {name: 'Disable', code: 3},
+    ];
   }
 
   nextLevel(): void {

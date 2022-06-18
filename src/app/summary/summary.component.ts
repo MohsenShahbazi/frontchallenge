@@ -13,7 +13,7 @@ export class SummaryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  nextLevel(): void {
+  end(): void {
     // TODO disatch action
   }
 }
