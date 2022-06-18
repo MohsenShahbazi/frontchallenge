@@ -1,3 +1,11 @@
-<form [formGroup]="myform">
+<form [formGroup]="myForm"  (ngSubmit)="onFormSubmit()">
 
+  Amount: <input formControlName="amount"  placeholder="Enter Name">
+  Date: <input formControlName="date"  placeholder="Enter Age">
+  Status: <input formControlName="status"  placeholder="Enter Age">
+  Source: <input formControlName="source"  placeholder="Enter Age">
+  <button type="submit">Submit</button>
+
+  <button pButton type="button" label="Goto Table"  [disabled]="myForm.invalid" ></button>
 </form>
+

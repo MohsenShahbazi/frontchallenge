@@ -16,6 +16,8 @@ export class UploadComponent implements OnInit {
   }
 
   nextLevel():void{
+
+    // TODO disatch action
     this.router.navigate(['form']);
   }
 
