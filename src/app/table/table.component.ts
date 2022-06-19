@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {FormBuilder} from "@angular/forms";
+import {SharedDataService} from "../sharedData.service";
 
 @Component({
   selector: 'app-table',
@@ -10,11 +12,16 @@ export class TableComponent implements OnInit {
   products: any[] = [];
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private sharedService: SharedDataService) {
   }
 
 
   ngOnInit(): void {
+
+    this.sharedService.currentSource.subscribe(info => {
+      console.log(info);
+    }).unsubscribe();
+
   }
 
   nextLevel(): void {

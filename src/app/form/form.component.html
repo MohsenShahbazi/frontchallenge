@@ -9,8 +9,7 @@
   Source:
   <textarea pInputTextarea formControlName="source" placeholder="Enter Source of fund"></textarea>
 
-  <button type="submit">Submit</button>
+  <button pButton label="Goto Table" type="submit" [disabled]="myForm.invalid"></button>
 
-  <button pButton type="button" label="Goto Table" [disabled]="myForm.invalid"></button>
 </form>
 
